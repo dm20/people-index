@@ -11,4 +11,6 @@ A simple Go service for creating and modifying key-value pairs that need to pers
 
 Include the test() function in people_index.go to demo the functionality. 
 
+example.json is the JSON file that results from including runTests() in people_index.go
+
 Uses <a href='https://github.com/Jeffail/gabs'> this JSON library</a>
