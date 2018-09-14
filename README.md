@@ -1,7 +1,7 @@
 # People Index
 A simple Go service for creating and modifying key-value pairs that need to persist in memory.
 
-Features:
+### Features:
   1) Create JSON files if not already created
   2) Edit existing or new JSON files by adding 'people' tags  
      - A person tag can be any key and associated value
