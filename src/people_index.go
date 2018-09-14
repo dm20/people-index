@@ -14,7 +14,7 @@
 
 // To test
 // 1) paste the function test.go to the bottom of this file
-// 2) call test() from main 
+// 2) call runTests() from main 
 
 package main
 
@@ -31,7 +31,7 @@ func main() {
 
   initialize()
 
-  // call test() here if desired
+  // call runTests() here if desired
 
   addNewPerson("a key","a value")
 
