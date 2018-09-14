@@ -45,9 +45,9 @@ func addNewPerson(key string, value string) {
 
 // add another value to the given key (creates an array)
 func addChildToKey(key string, value string) {
-  newCan := gabs.New()
-  newCan.Set(value,"people",key)
-  existing_json.Merge(newCan);
+  newPerson := gabs.New()
+  newPerson.Set(value,"people",key)
+  existing_json.Merge(newPerson);
 }
 
 // delete a person from the JSON file (key can still be used)
@@ -57,7 +57,7 @@ func deletePerson(key string) {
 
 // list the associated value (single person or array) for a given key
 func listValueForKey(key string) string {
-	return existing_json.Path("people." + key).String()
+  return existing_json.Path("people." + key).String()
 }
 
 // Update and close the file
@@ -80,7 +80,7 @@ func initialize() {
     f.WriteString(newFile)
     fmt.Println("\n\nDone.\n\n")
   }
-
+	
   existing_data, _ := ioutil.ReadFile("./people.json")
   existing_json, _ = gabs.ParseJSON(existing_data)
 }
