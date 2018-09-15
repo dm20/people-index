@@ -2,7 +2,7 @@
 A simple Go service for creating and modifying key-value pairs in a persistent ledger.
 
 ### Features:
-  1) Create JSON files if not already created
+  1) Create and save JSON files locally if one does not yet exist
   2) Edit existing or new JSON files by adding 'people' tags  
      - A person tag can be any key and associated value
   3) Look up person information by key
