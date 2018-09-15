@@ -4,7 +4,7 @@
 * DESCRIPTION:
 * This service tracks "people" information by creating a JSON file called 
 * "people.json" in the location that the service is stored, if one does not already exist, 
-* and can add new people as well as list people info, and delete people info.
+* and can add new people as well as retrieve people info, and delete people info.
 */
 
 package main
