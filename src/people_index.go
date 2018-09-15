@@ -48,18 +48,20 @@ func addChildToKey(key string, value string) {
   existing_json.Merge(newChild);
 }
 
-// delete a person from the JSON file (key can still be used)
-func deletePerson(key string) {
-  num_deletions++
-  existing_json.Set("nil","people",key)
-}
-
 // list the associated value (single person or array) for a given key
 func listValueForKey(key string) string {
 	return existing_json.Path("people." + key).String()
 }
 
+// delete a person from the JSON file (key can still be used)
+// see next function also
+func deletePerson(key string) {
+  num_deletions++
+  existing_json.Set("nil","people",key)
+}
+
 // delete any lines in the JSON file marked as deleted
+// called whenever a session ends
 func clearHangingKeys(input string) string {
   if (num_deletions == 0) { return input }
   lines := strings.Split(string(input), "\n")
