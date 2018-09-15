@@ -21,20 +21,18 @@ package main
 import (
   "fmt"
   "os"
+  "strings"
   "io/ioutil"
   "github.com/Jeffail/gabs"
 )
 
 var existing_json *gabs.Container
+var num_deletions int
 
 func main() {
-
   initialize()
-
   // call runTests() here if desired
-
   addNewPerson("a key","a value")
-
   exit()
 }
 
@@ -45,27 +43,44 @@ func addNewPerson(key string, value string) {
 
 // add another value to the given key (creates an array)
 func addChildToKey(key string, value string) {
-  newPerson := gabs.New()
-  newPerson.Set(value,"people",key)
-  existing_json.Merge(newPerson);
+  newChild := gabs.New()
+  newChild.Set(value,"people",key)
+  existing_json.Merge(newChild);
 }
 
 // delete a person from the JSON file (key can still be used)
 func deletePerson(key string) {
-  existing_json.Set("","people",key)
+  num_deletions++
+  existing_json.Set("nil","people",key)
 }
 
 // list the associated value (single person or array) for a given key
 func listValueForKey(key string) string {
-  return existing_json.Path("people." + key).String()
+	return existing_json.Path("people." + key).String()
 }
 
-// Update and close the file
+// delete any lines in the JSON file marked as deleted
+func clearHangingKeys(input string) string {
+  if (num_deletions == 0) { return input }
+  lines := strings.Split(string(input), "\n")
+  newLines := make([]string, len(lines) - num_deletions)
+  j := 0
+  for _, line := range lines {
+    if (!strings.Contains(line, "nil")) { 
+      newLines[j] = line
+      j++
+    }
+  num_deletions = 0 // reset if more than one call per session
+  return strings.Join(newLines, "\n")
+}
+
+// Update and close the file. 
 func exit() {
   str := existing_json.StringIndent("", "  ")
+  newFile := clearHangingKeys(str) // Any entries deleted in this session are removed
   f, _ := os.Create("./people.json")
   f.Sync()
-  f.WriteString(str);
+  f.WriteString(newFile);
   defer f.Close()
 }
 
@@ -80,7 +95,7 @@ func initialize() {
     f.WriteString(newFile)
     fmt.Println("\n\nDone.\n\n")
   }
-	
+
   existing_data, _ := ioutil.ReadFile("./people.json")
   existing_json, _ = gabs.ParseJSON(existing_data)
 }
