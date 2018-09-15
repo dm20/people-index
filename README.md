@@ -1,4 +1,4 @@
-# People Index
+# People Index (Persistent JSON Ledger Editing Service)
 A simple Go service for creating and modifying key-value pairs in a persistent ledger.
 
 ### Features:
