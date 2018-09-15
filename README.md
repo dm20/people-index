@@ -7,12 +7,12 @@ A simple Go service for creating and modifying key-value pairs in a persistent l
      - A person tag can be any key and associated value
   3) Look up person information by key
   4) Delete person information associated with a given key  
-     - Remove "hanging keys" from the JSON file itself
+     - Remove "hanging keys" and whitespace from the JSON file itself
   5) Add multiple values to one key
+  
 
 Include the test() function in people_index.go to demo the functionality. 
 
 example.json is the JSON file that results from including runTests() in people_index.go
 
-Uses the <a href='https://github.com/Jeffail/gabs'>gabs</a> JSON library.  
-     - This service has a deletion function that is not available in gabs
+Uses the <a href='https://github.com/Jeffail/gabs'>gabs</a> JSON library.    
