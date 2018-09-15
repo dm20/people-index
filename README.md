@@ -19,4 +19,4 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
     go build people_index.go
     go run people_index.go
 
-Uses the <a href='https://github.com/Jeffail/gabs'>gabs</a> JSON library to format and merge JSON objects.    
+dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
