@@ -9,10 +9,9 @@ A simple Go service for creating and modifying key-value pairs in a persistent l
   4) Delete person information associated with a given key  
      - Remove "hanging keys" and whitespace from the JSON file itself
   5) Add multiple values to one key
-  
+  6) Include the test() function in people_index.go to demo the functionality.
+     - creates a file equivalent to example.json
 
-Include the test() function in people_index.go to demo the functionality. 
 
-example.json is the JSON file that results from including runTests() in people_index.go
 
 Uses the <a href='https://github.com/Jeffail/gabs'>gabs</a> JSON library.    
