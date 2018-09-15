@@ -13,7 +13,8 @@ A simple Go service for creating and modifying key-value pairs in a persistent l
      - Creates a file equivalent to example.json called people.json
 
 ### To run the service:
-    go get go get github.com/Jeffail/gabs
+    git clone https://github.com/dm20/people-index
+    go get github.com/Jeffail/gabs
     go build people_index.go
     go run people_index.go
 

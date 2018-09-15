@@ -1,6 +1,9 @@
 // to be used in "people_index.go" to test the functionalities of the service
 // run from main
 
+// to be used in "people_index.go" to test the functionalities of the service
+// run from main
+
 func runTests() {
   addNewPerson("1","Oliver")
   addChildToKey("1","A similar person to Oliver, Bill")
