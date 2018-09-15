@@ -1,5 +1,5 @@
 # People Index
-A simple Go service for creating and modifying key-value pairs that need to persist in memory.
+A simple Go service for creating and modifying key-value pairs in a persistent ledger.
 
 ### Features:
   1) Create JSON files if not already created
