@@ -7,15 +7,6 @@
 * and can add new people as well as list people info, and delete people info.
 */
 
-// To run the service
-// 1) go get github.com/Jeffail/gabs
-// 2) go build people_index.go
-// 3) go run people_index.go
-
-// To test
-// 1) paste the function test.go to the bottom of this file
-// 2) call runTests() from main 
-
 package main
 
 import (
