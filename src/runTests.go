@@ -1,6 +1,9 @@
 // to be used in "people_index.go" to test the functionalities of the service
 // run from main
 
+// to be used in "people_index.go" to test the functionalities of the service
+// run from main
+
 func runTests() {
   addNewPerson("1","Oliver")
   addChildToKey("1","A similar person to Oliver, Bill")
@@ -15,13 +18,14 @@ func runTests() {
   addNewPerson("8","Joanne")
   addNewPerson("9","Dani")
 
+  deletePerson("3")
   deletePerson("9")
   deletePerson("8")
   deletePerson("7")
 
   name1 := listValueForKey("1")
   name2 := listValueForKey("2")
-  name3 := listValueForKey("3")
+  name3 := listValueForKey("3") // will print "nil" and hanging key is deleted when session ends
   name4 := listValueForKey("4")
   name5 := listValueForKey("5")
   name6 := listValueForKey("6")
