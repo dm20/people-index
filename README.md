@@ -14,5 +14,5 @@ Include the test() function in people_index.go to demo the functionality.
 
 example.json is the JSON file that results from including runTests() in people_index.go
 
-Uses the <a href='https://github.com/Jeffail/gabs'>gabs</a> JSON library.
+Uses the <a href='https://github.com/Jeffail/gabs'>gabs</a> JSON library.  
      - This service has a deletion function that is not available in gabs
