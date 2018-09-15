@@ -31,7 +31,7 @@ var num_deletions int
 
 func main() {
   initialize()
-  // call runTests() here if desired
+  // call runTests() here 
   addNewPerson("a key","a value")
   exit()
 }
