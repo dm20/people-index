@@ -44,8 +44,8 @@ func listValueForKey(key string) string {
   return existing_json.Path("people." + key).String()
 }
 
-// delete a person from the JSON file (key can still be used)
-// see next function also
+// delete a person associated with a given key
+// see clearHangingKeys() as well
 func deletePerson(key string) {
   num_deletions++
   existing_json.Set("nil","people",key)
