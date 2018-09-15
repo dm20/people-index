@@ -12,6 +12,9 @@ A simple Go service for creating and modifying key-value pairs in a persistent l
   6) Include the test() function in people_index.go to demo the functionality.
      - creates a file equivalent to example.json
 
-
+### To run
+    go get go get github.com/Jeffail/gabs
+    go build people_index.go
+    go run people_index.go
 
 Uses the <a href='https://github.com/Jeffail/gabs'>gabs</a> JSON library.    
