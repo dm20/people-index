@@ -50,7 +50,7 @@ func addChildToKey(key string, value string) {
 
 // list the associated value (single person or array) for a given key
 func listValueForKey(key string) string {
-	return existing_json.Path("people." + key).String()
+  return existing_json.Path("people." + key).String()
 }
 
 // delete a person from the JSON file (key can still be used)
