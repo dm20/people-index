@@ -9,8 +9,8 @@ A simple Go service for creating and modifying key-value pairs in a persistent l
   3) Look up person information by key
   4) Delete person information associated with a given key  
      - Remove "hanging keys" and whitespace from the JSON file itself
-  5) Include the test() function in people_index.go to demo the functionality.
-     - creates a file equivalent to example.json
+  5) Include the test() function in people_index.go to demo functionality
+     - creates a file equivalent to example.json called people.json
 
 ### To run the service:
     go get go get github.com/Jeffail/gabs
