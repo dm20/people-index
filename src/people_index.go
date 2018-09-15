@@ -72,6 +72,7 @@ func clearHangingKeys(input string) string {
       newLines[j] = line
       j++
     }
+  }
   num_deletions = 0 // reset if more than one call per session
   return strings.Join(newLines, "\n")
 }
