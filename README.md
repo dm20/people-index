@@ -13,13 +13,14 @@ The service is demonstrated using people's names as values and integer IDs as ke
      - Remove "hanging keys" and whitespace from the JSON file itself
  - Include the test() function in people_index.go to demo functionality
      - Creates a file equivalent to example.json called people.json
-
-## To run an example session:
-1) get people_index
-
+     
+## To run an example session:  
+1) get people_index  
+```shell
     go get github.com/dm20/people_index
-    
+```    
 2) create 'example_session.go':
+
 ```go
 package main
 
@@ -31,10 +32,11 @@ func main() {
   people_index.SaveAndExit()  // replace old json data with updated json data in 'people.json'
 }
 ```
-3) get external dependencies and run
-
+3) get external dependencies and run  
+```shell
     go get ./examples/example_session.go
     go run example_session.go
+```
 
 which creates a file that looks like this:
 ```json
