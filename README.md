@@ -27,10 +27,10 @@ func main() {
   4) Delete person information associated with a given key  
      - Remove "hanging keys" and whitespace from the JSON file itself
   5) Include the test() function in people_index.go to demo functionality
-     - Creates a file equivalent to example.json called people.json
-     
-     
-
-*Note dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
+     - Creates a file equivalent to example.json called people.json  
+       
+         
+           
+##### *Note dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
 
     go get github.com/Jeffail/gabs
