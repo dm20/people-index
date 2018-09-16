@@ -16,6 +16,24 @@ func main() {
   people_index.Exit().      // save changes that were made to data in people.json
 }
 ```
+generates:
+```json
+{
+  "people": {
+    "1": [
+      "Oliver",
+      "A similar person to Oliver, Bill"
+    ],
+    "2": "John",
+    "4": "Reece",
+    "5": [
+      "Eric",
+      "A similar person to Eric, Jane"
+    ],
+    "6": "Allice",
+  }
+}
+```
 ## Features:
   1) Create and save JSON files locally if one does not yet exist
   2) Edit existing or new JSON files by adding 'people' tags  
