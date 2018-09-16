@@ -1,8 +1,4 @@
-// to be used in "people_index.go" to test the functionalities of the service
-// run from main
-
-// to be used in "people_index.go" to test the functionalities of the service
-// run from main
+// can be used in "people_index.go"
 
 package people_index
 
