@@ -20,4 +20,4 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
 
 *Note dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
 
-    go get github.com/dm20/people_index
+    go get github.com/Jeffail/gabs
