@@ -4,7 +4,9 @@
 // to be used in "people_index.go" to test the functionalities of the service
 // run from main
 
-func runTests() {
+package people_index
+
+func RunTests() {
   addNewPerson("1","Oliver")
   addChildToKey("1","A similar person to Oliver, Bill")
   addNewPerson("5","Eric")
