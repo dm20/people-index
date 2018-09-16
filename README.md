@@ -11,8 +11,8 @@ package main
 import "github.com/dm20/people_index"
 
 func main() {
-  people_index.Initialize() // open 'people.json' and get existing file data, or create it if needed
-  people_index.RunTests()   // add new person tags, retrieve them, delete them
+  people_index.Initialize() // open 'people.themjson' and get existing file data, or create it if needed
+  people_index.RunTests()   // add new person tags, retrieve them, delete them. See RunTests() in people_index.go
   people_index.Exit().      // save changes that were made to data in people.json
 }
 ```
