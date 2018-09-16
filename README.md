@@ -13,7 +13,9 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
   5) Include the test() function in people_index.go to demo functionality
      - Creates a file equivalent to example.json called people.json
 
-### To run the service:
-    go get github.com/dm20/people_index
+### To run the example session:
+go get github.com/dm20/people_index
+go build example_session.go
+go run example_session.go
 
 dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
