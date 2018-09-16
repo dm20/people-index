@@ -1,5 +1,5 @@
 # People Index
-## A simple Go service for creating and modifying key-value pairs in a persistent JSON ledger.    
+## A simple Go service for creating and modifying key-value pairs in a persistent <img src='http://blog.tagmania.es/wp-content/uploads/2015/01/json-compressor.png' a href='https://www.json.org' width ='90px'></img> ledger.    
 
 ## Features:
  - Create and save JSON files locally if one does not yet exist
