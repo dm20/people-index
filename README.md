@@ -15,7 +15,7 @@ func main() {
   people_index.RunTests()
 }
 ```
-### Features:
+## Features:
   1) Create and save JSON files locally if one does not yet exist
   2) Edit existing or new JSON files by adding 'people' tags  
      - A person tag can be any key and associated value
