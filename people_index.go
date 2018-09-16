@@ -113,16 +113,16 @@ func RunTests() {
   DeletePerson("8")
   DeletePerson("7")
 
-  name1 := listValueForKey("1")
-  name2 := listValueForKey("2")
-  name3 := listValueForKey("3") // will print "nil" and hanging key is deleted when session ends
-  name4 := listValueForKey("4")
-  name5 := listValueForKey("5")
-  name6 := listValueForKey("6")
-  mt.Println(name1)
-  mt.Println(name2)
-  mt.Println(name3)
-  mt.Println(name4)
-  mt.Println(name5)
-  mt.Println(name6)
+  name1 := ListValueForKey("1")
+  name2 := ListValueForKey("2")
+  name3 := ListValueForKey("3") // will print "nil" and hanging key is deleted when session ends
+  name4 := ListValueForKey("4")
+  name5 := ListValueForKey("5")
+  name6 := ListValueForKey("6")
+  fmt.Println(name1)
+  fmt.Println(name2)
+  fmt.Println(name3)
+  fmt.Println(name4)
+  fmt.Println(name5)
+  fmt.Println(name6)
 }
