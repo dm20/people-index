@@ -87,6 +87,7 @@ func Initialize() {
   existing_json, _ = gabs.ParseJSON(existing_data)
 }
 
+// In these tests, people's names are used as values and integer IDs are used as keys
 func RunTests() {
   AddNewPerson("1","Oliver")
   AddChildToKey("1","A similar person to Oliver, Bill")
