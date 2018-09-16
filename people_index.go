@@ -20,13 +20,6 @@ import (
 var existing_json *gabs.Container
 var num_deletions int
 
-// func main() {
-//   initialize()
-//   // call runTests() here 
-//   addNewPerson("a key","a value")
-//   exit()
-// }
-
 // create a new JSON object for each person that is created
 func AddNewPerson(key string, value string) {
   existing_json.Set(value,"people",key)
