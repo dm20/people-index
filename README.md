@@ -14,9 +14,6 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
      - Creates a file equivalent to example.json called people.json
 
 ### To run the service:
-    git clone https://github.com/dm20/people-index
-    go get github.com/Jeffail/gabs
-    go build people_index.go
-    go run people_index.go
+    go get github.com/dm20/people_index
 
 dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
