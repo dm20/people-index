@@ -13,6 +13,7 @@ import "github.com/dm20/people_index"
 func main() {
   people_index.Initialize()
   people_index.RunTests()
+  people_index.Exit()
 }
 ```
 ## Features:
