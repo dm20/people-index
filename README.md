@@ -5,7 +5,7 @@ The service is demonstrated using people's names as values and integer IDs as ke
 
 ## To run the example session:
     go get github.com/dm20/people_index
-
+create 'example_session.go'
 ```go
 package main
 
