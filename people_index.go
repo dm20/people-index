@@ -71,7 +71,7 @@ func ClearHangingKeys(input string) string {
 // Update and close the file. 
 func Exit() {
   str := existing_json.StringIndent("", "  ")
-  newFile := clearHangingKeys(str) // Any entries deleted in this session are removed
+  newFile := ClearHangingKeys(str) // Any entries deleted in this session are removed
   f, _ := os.Create("./people.json")
   f.Sync()
   f.WriteString(newFile);
@@ -95,23 +95,23 @@ func Initialize() {
 }
 
 func RunTests() {
-  addNewPerson("1","Oliver")
-  addChildToKey("1","A similar person to Oliver, Bill")
-  addNewPerson("5","Eric")
-  addChildToKey("5","A similar person to Eric, Jane")
+  AddNewPerson("1","Oliver")
+  AddChildToKey("1","A similar person to Oliver, Bill")
+  AddNewPerson("5","Eric")
+  AddChildToKey("5","A similar person to Eric, Jane")
 
-  addNewPerson("2","John")
-  addNewPerson("3","Amy")
-  addNewPerson("4","Reece")
-  addNewPerson("6","Allice")
-  addNewPerson("7","Bob")
-  addNewPerson("8","Joanne")
-  addNewPerson("9","Dani")
+  AddNewPerson("2","John")
+  AddNewPerson("3","Amy")
+  AddNewPerson("4","Reece")
+  AddNewPerson("6","Allice")
+  AddNewPerson("7","Bob")
+  AddNewPerson("8","Joanne")
+  AddNewPerson("9","Dani")
 
-  deletePerson("3")
-  deletePerson("9")
-  deletePerson("8")
-  deletePerson("7")
+  DeletePerson("3")
+  DeletePerson("9")
+  DeletePerson("8")
+  DeletePerson("7")
 
   name1 := listValueForKey("1")
   name2 := listValueForKey("2")
@@ -119,10 +119,10 @@ func RunTests() {
   name4 := listValueForKey("4")
   name5 := listValueForKey("5")
   name6 := listValueForKey("6")
-  fmt.Println(name1)
-  fmt.Println(name2)
-  fmt.Println(name3)
-  fmt.Println(name4)
-  fmt.Println(name5)
-  fmt.Println(name6)
+  mt.Println(name1)
+  mt.Println(name2)
+  mt.Println(name3)
+  mt.Println(name4)
+  mt.Println(name5)
+  mt.Println(name6)
 }
