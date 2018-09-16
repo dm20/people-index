@@ -3,11 +3,13 @@
 
 The service is demonstrated using people's names as values and integer IDs as keys
 
-## To run the example session:
-    go get github.com/dm20/people_index
-```go
-'example_session.go'
+## To run an example session:
+get people_index
 
+    go get github.com/dm20/people_index
+    
+create 'example_session.go':
+```go
 package main
 
 import "github.com/dm20/people_index"
@@ -18,9 +20,12 @@ func main() {
   people_index.SaveAndExit()  // replace old json data with updated json data in 'people.json'
 }
 ```
+get external dependencies
+
     go get ./examples/example_session.go
     go run example_session.go
-generates:
+
+which creates a file that looks like this:
 ```json
 {
   "people": {
@@ -47,10 +52,4 @@ generates:
   4) Delete person information associated with a given key  
      - Remove "hanging keys" and whitespace from the JSON file itself
   5) Include the test() function in people_index.go to demo functionality
-     - Creates a file equivalent to example.json called people.json  
-       
-         
-           
-##### *Note dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
-    go get github.com/Jeffail/gabs
-
+     - Creates a file equivalent to example.json called people.json
