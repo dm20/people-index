@@ -3,8 +3,9 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
 The service is demonstrated using people's names as values and integer IDs as keys
 
 ## To run an example session:
+```go
     go get github.com/dm20/people_index    
-    
+```
 ```go
 package main
 
@@ -29,5 +30,5 @@ func main() {
          
            
 ##### *Note dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
-
+```go
     go get github.com/Jeffail/gabs
