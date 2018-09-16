@@ -15,7 +15,10 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
 
 ### To run the example session:
     go get github.com/dm20/people_index
+dependency: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
+
+    go get github.com/Jeffail/gabs
     go build example_session.go
     go run example_session.go
 
-dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
+ 
