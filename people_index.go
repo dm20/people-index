@@ -62,7 +62,7 @@ func ClearHangingKeys(input string) string {
 }
 
 // Update and close the file. 
-func Exit() {
+func SaveAndExit() {
   str := existing_json.StringIndent("", "  ")
   newFile := ClearHangingKeys(str) // Any entries deleted in this session are removed
   f, _ := os.Create("./people.json")
