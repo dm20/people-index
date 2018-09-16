@@ -19,7 +19,7 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
     go run example_session.go
     
 ### example session code:
-    
+```go
     package main
 
     import "github.com/dm20/people_index"
@@ -28,6 +28,7 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
       people_index.Initialize()
       people_index.RunTests()
     }
+```
 
 *Note dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
 
