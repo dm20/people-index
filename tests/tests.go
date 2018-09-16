@@ -1,4 +1,4 @@
-// can be used in "people_index.go"
+// can be included in "people_index.go"
 
 package people_index
 
