@@ -38,7 +38,7 @@ func main() {
     go run example_session.go
 ```
 
-which creates a file that looks like this:
+which creates a JSON file named 'people.json':
 ```json
 {
   "people": {
