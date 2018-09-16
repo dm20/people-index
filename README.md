@@ -4,14 +4,14 @@
 The service is demonstrated using people's names as values and integer IDs as keys
 
 ## Features:
-  1) Create and save JSON files locally if one does not yet exist
-  2) Edit existing or new JSON files by adding 'people' tags  
+ - Create and save JSON files locally if one does not yet exist
+ - Edit existing or new JSON files by adding 'people' tags  
      - A person tag can be any key and associated value
      - Add multiple values to one key if desired
-  3) Look up person information by key
-  4) Delete person information associated with a given key  
+ - Look up person information by key
+ - Delete person information associated with a given key  
      - Remove "hanging keys" and whitespace from the JSON file itself
-  5) Include the test() function in people_index.go to demo functionality
+ - Include the test() function in people_index.go to demo functionality
      - Creates a file equivalent to example.json called people.json
 
 ## To run an example session:
