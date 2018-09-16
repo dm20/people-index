@@ -1,6 +1,6 @@
 # People Index
 A simple Go service for creating and modifying key-value pairs in a persistent JSON ledger.  
-#### The service is demonstrated using people's names as values and integer IDs as keys
+The service is demonstrated using people's names as values and integer IDs as keys
 
 ## To run the example session*
     go get github.com/dm20/people_index    
