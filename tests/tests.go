@@ -1,4 +1,6 @@
 // can be included in "people_index.go"
+// In the tests, people's names are used as values and integer IDs are used as keys
+
 
 package people_index
 
