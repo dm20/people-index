@@ -7,7 +7,7 @@
 * and can add new people as well as retrieve people info, and delete people info.
 */
 
-package main
+package people_index
 
 import (
   "fmt"
@@ -20,40 +20,40 @@ import (
 var existing_json *gabs.Container
 var num_deletions int
 
-func main() {
-  initialize()
-  // call runTests() here 
-  addNewPerson("a key","a value")
-  exit()
-}
+// func main() {
+//   initialize()
+//   // call runTests() here 
+//   addNewPerson("a key","a value")
+//   exit()
+// }
 
 // create a new JSON object for each person that is created
-func addNewPerson(key string, value string) {
+func AddNewPerson(key string, value string) {
   existing_json.Set(value,"people",key)
 }
 
 // add another value to the given key (creates an array)
-func addChildToKey(key string, value string) {
+func AddChildToKey(key string, value string) {
   newChild := gabs.New()
   newChild.Set(value,"people",key)
   existing_json.Merge(newChild);
 }
 
 // list the associated value (single person or array) for a given key
-func listValueForKey(key string) string {
+func ListValueForKey(key string) string {
   return existing_json.Path("people." + key).String()
 }
 
 // delete a person associated with a given key
 // see clearHangingKeys() as well
-func deletePerson(key string) {
+func DeletePerson(key string) {
   num_deletions++
   existing_json.Set("nil","people",key)
 }
 
 // delete any lines in the JSON file marked as deleted
 // called whenever a session ends
-func clearHangingKeys(input string) string {
+func ClearHangingKeys(input string) string {
   if (num_deletions == 0) { return input }
   lines := strings.Split(string(input), "\n")
   newLines := make([]string, len(lines) - num_deletions)
@@ -69,7 +69,7 @@ func clearHangingKeys(input string) string {
 }
 
 // Update and close the file. 
-func exit() {
+func Exit() {
   str := existing_json.StringIndent("", "  ")
   newFile := clearHangingKeys(str) // Any entries deleted in this session are removed
   f, _ := os.Create("./people.json")
@@ -79,7 +79,7 @@ func exit() {
 }
 
 // If no file exists, create it, otherwise open it in writable format
-func initialize() {
+func Initialize() {
   f, err := os.OpenFile("./people.json",os.O_APPEND | os.O_WRONLY, 0600)
   if (err != nil) {
     fmt.Println("\n\nCreating 'people.json'...\n\n")
