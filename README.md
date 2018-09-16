@@ -20,14 +20,14 @@ A simple Go service for creating and modifying key-value pairs in a persistent J
     
 ### example session code:
 ```go
-    package main
+package main
 
-    import "github.com/dm20/people_index"
+import "github.com/dm20/people_index"
 
-    func main() {
-      people_index.Initialize()
-      people_index.RunTests()
-    }
+func main() {
+  people_index.Initialize()
+  people_index.RunTests()
+}
 ```
 
 *Note dependencies: <a href='https://github.com/Jeffail/gabs'>gabs</a>  
