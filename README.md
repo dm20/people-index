@@ -54,4 +54,4 @@ which creates a JSON file named 'people.json':
   }
 }
 ```
-<img src='https://static.allcloud.com/assets/images/blog/golang.png' width = '90' height = '50' link='https://golang.org'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1000px-JSON_vector_logo.svg.png' width = '45' height ='45' link='https://www.json.org'>
+[<img src='https://static.allcloud.com/assets/images/blog/golang.png' width = '90' height = '50'>](https://golang.org)[<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/JSON_vector_logo.svg/1000px-JSON_vector_logo.svg.png' width = '45' height ='45'>](https://www.json.org)
