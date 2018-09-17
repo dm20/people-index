@@ -70,7 +70,6 @@ func Initialize() {
 
 // In these tests, people's names are used as values and integer IDs are used as keys
 func RunTests() {
-	AddNewPerson("10","Oliver")
   AddNewPerson("1","Oliver")
   AddChildToKey("1","A similar person to Oliver, Bill")
   AddNewPerson("5","Eric")
