@@ -12,13 +12,12 @@ package people_index
 import (
   "fmt"
   "os"
-  "strings"
   "io/ioutil"
   "github.com/Jeffail/gabs"
 )
 
 var existing_json *gabs.Container
-var num_deletions int
+var f *os.File
 
 // create a new JSON object for each person that is created
 func AddNewPerson(key string, value string) {
@@ -40,34 +39,15 @@ func ListValueForKey(key string) string {
 // delete a person associated with a given key
 // see clearHangingKeys() as well
 func DeletePerson(key string) {
-  num_deletions++
-  existing_json.Set("nil","people",key)
-}
-
-// delete any lines in the JSON file marked as deleted
-// called whenever a session ends
-func ClearHangingKeys(input string) string {
-  if (num_deletions == 0) { return input }
-  lines := strings.Split(string(input), "\n")
-  newLines := make([]string, len(lines) - num_deletions)
-  j := 0
-  for _, line := range lines {
-    if (!strings.Contains(line, "nil")) { 
-      newLines[j] = line
-      j++
-    }
-  }
-  num_deletions = 0 // reset if more than one call per session
-  return strings.Join(newLines, "\n")
+  existing_json.DeleteP("people." + key)
 }
 
 // Update and close the file. 
 func SaveAndExit() {
   str := existing_json.StringIndent("", "  ")
-  newFile := ClearHangingKeys(str) // Any entries deleted in this session are removed
-  f, _ := os.Create("./people.json")
+  f, _ = os.Create("./people.json")
   f.Sync()
-  f.WriteString(newFile);
+  f.WriteString(str);
   defer f.Close()
 }
 
@@ -85,10 +65,12 @@ func Initialize() {
 
   existing_data, _ := ioutil.ReadFile("./people.json")
   existing_json, _ = gabs.ParseJSON(existing_data)
+  fmt.Println(existing_json)
 }
 
 // In these tests, people's names are used as values and integer IDs are used as keys
 func RunTests() {
+	AddNewPerson("10","Oliver")
   AddNewPerson("1","Oliver")
   AddChildToKey("1","A similar person to Oliver, Bill")
   AddNewPerson("5","Eric")
