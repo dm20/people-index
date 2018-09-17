@@ -91,7 +91,7 @@ func RunTests() {
 
   name1 := ListValueForKey("1")
   name2 := ListValueForKey("2")
-  name3 := ListValueForKey("3") // will print "nil" and hanging key is deleted when session ends
+  name3 := ListValueForKey("3") // will print "{}" and hanging key is deleted when session ends
   name4 := ListValueForKey("4")
   name5 := ListValueForKey("5")
   name6 := ListValueForKey("6")
