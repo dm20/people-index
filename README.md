@@ -30,7 +30,7 @@ func main() {
   people_index.SaveAndExit()  // replace old json data with updated json data in 'people.json'
 }
 ```
-3) get external dependencies and run  
+3) get external dependencies (one time only) and run  
 ```shell
     go get ./examples/example_session.go
     go run example_session.go
