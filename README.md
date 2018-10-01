@@ -5,6 +5,8 @@
  - Edit existing or new JSON files by adding 'people' tags  
      - A person tag can be any key and associated value
      - Add multiple values to one key if desired
+     - A key can be of type string or int
+     - A value can be of type string, int, or array of string/int
  - Look up person information by key
  - Delete person information associated with a given key  
      - Remove "hanging keys" and whitespace from the JSON file itself
