@@ -1,4 +1,3 @@
-# People Index
 ## A simple Go service for creating and modifying key-value pairs in a persistent JSON file.    
 
 ## Features:
