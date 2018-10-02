@@ -11,7 +11,7 @@ func main() {
 // 1) make sure to put the interface in $GOPATH : 
 //       go get github.com/dm20/people_index
 //
-//    and to get the dependencies: 
+//    and to get the external dependencies manually: 
 //        go get github.com/Jeffail/gabs
 //
 // 2) go build example_session.go
